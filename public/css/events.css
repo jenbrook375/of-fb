@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+
+:root { 
+  --green: #BCC77F;
+  --dkgreen: #a0ab95;
+  --ltgrey: #C6C9CD;
+  --white: #fafafa;
+  --dkgrey: #6C757D;
+  --ltgreen: #F2EB80;
+  --main-font: 'Open Sans', sans-serif;
+  --header: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--ltgreen);
+  font-family: var(--main-font);
+}
+
+.header{
+background-color: var(--green);
+}
+
+.lorem{
+  color: #fafafa;
+  width: 550px;
+  height: 200px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.column{
+    width: 100vw;
+    height: 42%;
+    padding: 0px;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 25px solid #C6C9CD;
+    background-color: #BCC77F;
+  }
+
+  h2{
+    color: var(--white);
+    margin-top: 23px;
+  }
+
+  .white-border{
+    border: 5px solid white;
+  }
+
+/* nav start */
+
+
+
+.dropdown-menu{
+  background-color: #fafafa;
+  min-width: 15rem;
+  top: 128%!important;
+}
+
+.dropdown-item, h5{
+  text-align: center;
+  padding: 1.25rem 1.5rem;
+}
+
+#icon, #temp, #weather{
+  margin-left: 31%;
+}
+/* nav end */
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* events page */
+.air{
+  height: 332px;;
+  width: 250px;
+  border: none;
+}
+
+.weather-container{
+  padding: 46px;
+}
+
+  .events{
+    position: absolute;
+    top: 70%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #fafafa;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+
+.card-columns{
+    margin: 60px;
+}
+
+.card-img-top{
+    height: 300px;
+    width: 331px;
+    margin: auto;
+}
+
+.card:hover{
+  box-shadow: 5px 10px 18px #4d4d4d;
+}
+
+
+/* mobile */
+@media screen and (max-width: 600px) {
+   
+    body{
+        width: 161vw;
+    }
+
+    .column {
+        width: 100%;
+      }
+
+    .valley{
+        width: 100%;
+    }
+  }
+
+  /* footer */
+  footer {
+    width: 100%;
+    height: 100px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+ 
+  .social-media {
+     margin-left: 45%;
+  }
+ 
