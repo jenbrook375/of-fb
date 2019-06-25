@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.2.2/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.2.2/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.2.2/firebase-database.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/favorites.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Outside Fresno</title>
+</head>
+<body>
+
+        <header>
+                <!-- START OF NAV -->
+                <nav class="dropright">
+                 <a class="btn btn-secondary dropdown-toggle menu" onclick="openNav()" href="#" role="button" id="dropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/logo.png" alt="logo"></a>
+                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" class="overflow-auto">
+                   <div class="menu-info">                 
+               </nav>
+             
+               <!-- END OF NAV -->
+               <!-- Welcome sign -->
+               <div id="test">
+                 <img id="photo" src="" alt="photo of user">
+                 <h2 id="userName"></h2>
+               </div>
+               </header>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type</th>
+            <th scope="col">Name</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="favType"></td>
+            <td class="favName"></td>
+            <td class="favLink"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="favType"></td>
+            <td class="faveName"></td>
+            <td class="favLink"></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td class="favType"></td>
+            <td class="faveName"></td>
+            <td class="faveLink"></td>
+          </tr>
+        </tbody>
+      </table>
+
+     <!-- JAVASCRIPT LINKING -->
+
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+  <script src="/__/firebase/6.1.1/firebase-app.js"></script>
+  <script src="/__/firebase/6.1.1/firebase-auth.js"></script>
+  <script src="/__/firebase/6.1.1/firebase-storage.js"></script>
+  <script src="/__/firebase/6.1.1/firebase-messaging.js"></script>
+  <script src="/__/firebase/6.1.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/6.1.1/firebase-performance.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAid837o-75EA9rbiPOZdEVh1fruZhKr24",
+      authDomain: "outside-fresno-1.firebaseapp.com",
+      databaseURL: "https://outside-fresno-1.firebaseio.com",
+      projectId: "outside-fresno-1",
+      storageBucket: "",
+      messagingSenderId: "474578362113",
+      appId: "1:474578362113:web:4326ffcf9888a91b"
+    };
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});
+  </script>
+  <script src="js/favorites.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/888ccafea8.js"></script>
+  
+</body>
+</html>

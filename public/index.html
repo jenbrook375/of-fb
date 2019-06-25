@@ -44,9 +44,6 @@
   </nav>
 
   <!-- END OF NAV -->
-
-
-
   <!-- Welcome sign -->
   <div id="test">
     <img id="photo" src="" alt="photo of user">
@@ -126,7 +123,10 @@
       messagingSenderId: "474578362113",
       appId: "1:474578362113:web:4326ffcf9888a91b"
     };
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});
   </script>
+  
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
