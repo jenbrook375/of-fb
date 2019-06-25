@@ -22,6 +22,31 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
   });
 
+  const favoritesList = document.querySelector('#favorites-list');
+
+  // create element and render list of favorites
+  function renderFaves(doc){
+    let li = document.createElement('li');
+    let type = document.createElement('span');
+    let name = document.createElement('span');
+    let link = document.createElement('span');
+
+    // set data on the elements created
+    li.setAttribute('data-id', doc.id);
+    type.textContent = doc.data().type;
+    name.textContent = doc.data().name;
+    link.textContent = doc.data().link;
+
+    li.appendChild(type);
+    li.appendChild(name);
+    li.appendChild(link);
+
+    favoritesList.appendChild(li);
+  }
+
 db.collection('users').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc=>{
+        renderFaves(doc);
     console.log(snapshot.docs);
+    });
 })
