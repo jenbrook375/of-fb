@@ -26,11 +26,14 @@ document.getElementById("photo").src = photoURL;
 // Function that moves all content in main div to the right when the menu is open
 function openNav(){
   document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("menu").classList.toggle("show");
 }
+
 
 // Set the width of the navbar to 0 and the left margin of the page content to 0 
 function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("menu").classList.toggle("show");
 }
 
 // END OF MAIN NAV

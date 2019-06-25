@@ -60,19 +60,6 @@ signOutBtn.addEventListener('click', e=>{
 })
 
 
-
-
-// nav button
-// function openNav(){
-//   document.getElementById("main").style.marginLeft = "250px";
-//   console.log(openNav);
-// }
-
-// display name
-// var user = localStorage.getItem("name");
-// var welcome = 'Welcome '+ user + "!";
-// document.getElementById("test").innerHTML = welcome;
-
 // weather 
 // variables for each element of api call and api key
 var api = 'https://api.openweathermap.org/data/2.5/weather?q='; // api endpoint

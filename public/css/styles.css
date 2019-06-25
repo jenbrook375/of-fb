@@ -55,6 +55,7 @@ header {
 h2 {
   padding-top: 5px;
 }
+
 /* NAV BAR*/
 
 .menu {
@@ -140,11 +141,23 @@ h2 {
   border: 1px solid lightgray;
 }
 
+/* Name */
+
+#test {
+  color: white;
+  font-size: 56px;
+  margin-top: 5%;
+}
+
+.name-container {
+  margin-left: 25%;
+}
 
 /* Welcome */
 
 .welcome-intro {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -179,6 +192,7 @@ footer {
   height: 100px;
   margin-right: 0;
   margin-left: 0;
+  padding-top: 30px;
 }
 
 .social-media {
@@ -188,4 +202,3 @@ footer {
 .fa-3x {
   color: var(--dkgrey);
 }
- 
