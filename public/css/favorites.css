@@ -10,21 +10,143 @@ body {
     width: 100vw;
     height: 100vh;
   }
-  
-h1{
-    color: #fff;
-    font-size: 64px;
-    letter-spacing: 2px;
-    margin-top: 80px;
-    text-align: center;
+
+  .heading {
+    display: flex;
+   background-color: #C9D57F;
+   border-bottom: 25px solid #c6c9cd;
+   width: 100vw;
+   height: 40%;
+   padding: 0px;
+   margin-right: 0;
+   margin-left: 0;
+   justify-content: space-around;
+   border-bottom: 25px solid #C6C9CD;
+   background-color: #BCC77F;
+     
 }
 
+
+#test {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 20px;
+  }
+img#photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 15px 15px 15px;
+  }
+  
+  h3 {
+    padding-top: 5px;
+  }
+.logo {
+    background-color: grey;
+}
+
+
+.dropdown {
+   position: absolute;
+   top: 18%;
+   left: 10%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   background-color: #fafafa;
+   color: #fafafa;
+   font-size: 16px;
+   padding: 10px;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+   
+ } 
+
+ .dropdown-menu{
+   background-color: #fafafa;
+   min-width: 15rem;
+   top: 125%!important;
+ }
+
+ .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   
+   font-size: 36px;
+   margin-left: 5px 0 5px 50px;
+   color: darkgray;
+ }
+
+.weather-container {
+   text-align: center;
+   background-color: lightgrey;
+   padding: 45px;
+   margin: 45px;
+   border: 2px solid grey;
+}
+
+.air {
+   height: 335px;
+   width:95%;
+   border: none;
+   overflow: auto;
+}
+
+iframe {
+   width: 200px;
+   margin: 0px 0px 20px 20px;
+}
+
+.dropdown-item{
+ color:#fafafa;
+ padding-bottom: 45px;
+ text-align: center;
+}
+
+.dropdown-item:hover {
+   color: yellowgreen;
+}
+
+a:hover{
+   color: yellowgreen;
+}
+
+a:active { 
+   background-color: yellowgreen;
+ }
+
+.header_info {
+   display: flex;
+   flex-direction: column;
+}
+h1 {
+   margin: 25px 0 0 320px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+   margin-left: 320px;
+   padding-top: 25px;
+   color: white;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+	transition: margin-left .5s; /* If you want a transition effect */
+	padding: 20px;
+}
+
+  /* END OF NAV BAR */
 .content{
     background: #fff;
     max-width: 960px;
     margin: 30px auto;
     padding:  20px 30px;
-    border-radius: 10px 120px 10px 10px;
+    /* border-radius: 10px 120px 10px 10px; */
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
 }
 
@@ -40,7 +162,7 @@ li{
     color: #555;
     position: relative;
     border-bottom: 1px solid #e6e6e6;
-    height: 46px;
+    margin: 5px;
 }
 
 li:nth-child(even){
@@ -50,10 +172,40 @@ li:nth-child(even){
 
 li span{
     display: block;
+    margin-bottom: 2px;
 }
 
 li span:nth-child(2){
     font-size: 16px;
     margin-top: 6px;
     color: #999;
+}
+
+li span:nth-child(3){
+  font-size: 14px;
+  margin-top: 6px;
+  color: #999;
+}
+
+
+li a {
+    display: block;
+    margin-bottom: 2px;
+    height: 20px;
+}
+
+li a:hover {
+  color: yellowgreen;
+}
+
+li div{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: rgba(255,255,255,0.6);
+  width: 40px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight:  bold;
+  cursor:  pointer;
 }

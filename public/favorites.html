@@ -14,36 +14,59 @@
   <script defer src="/__/firebase/init.js"></script>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="stylesheet" href="css/favorites.css">
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/favorites.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Outside Fresno</title>
 </head>
 
 <body>
 
-  <header>
-    <!-- START OF NAV -->
-    <nav class="dropright">
-      <a class="btn btn-secondary dropdown-toggle menu" onclick="openNav()" href="#" role="button" id="dropdownMenuLink"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/logo.png" alt="logo"></a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" class="overflow-auto">
-        <div class="menu-info">
+  <header class="heading">
+    <nav class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" onclick="openNav()" href="#" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false"><img src="img/logo.png" alt="logo"></a>
+      <div id = "menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink" class="overflow-auto">
+
+        <!-- the following content is inside the dropdown menu,and will only show when the dropdown is open -->
+        <div class="weather-container">
+          <!--this container holds the current weather api data-->
+          <h5>Current Weather</h5>
+          <img id="icon" alt="">
+          <p id="temp"></p>
+          <p id="weather"></p>
+        </div>
+        <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="dropdown-item" href="index.html" target="_blank"><img src="img/home.png"></a>
+        <a class="dropdown-item" href="biking.html" target="_blank"><img src="img/bike.png"></a>
+        <a class="dropdown-item" href="hiking.html" target="_blank"><img src="img/hiking.png"></a>
+        <a class="dropdown-item" href="parks.html" target="_blank"><img src="img/park.png"></a>
+        <a class="dropdown-item" href="events.html" target="_blank"><img src="img/event.png"></a>
+        <!--this iframe is the current fresno aqi-->
+        <iframe class="air"
+          src="https://epa.gov/cgi-bin/schoolflagwidgetcurrentforecast.cgi?z=93728&n=OUTSIDE FRESNO"></iframe>
+      </div>
+      <!--end of dropdwon content-->
     </nav>
-
-    <!-- END OF NAV -->
-    <!-- Welcome sign -->
-    <div id="test">
-      <img id="photo" src="" alt="photo of user">
-      <h2 id="userName"></h2>
+    <!--this holds the return from the user iput 'name' -->
     </div>
-  </header>
-  <h1>My Wishlist</h1>
+    <div class="header_info">
+        <div id="test">
+                <img id="photo" src="" alt="photo of user">
+                <h3 id="userName"></h3>
+        </div>
 
+  </header>
+    <div id="main">
+  <h1>My Wishlist</h1>
+</div>
   <div class="content">
     <!-- Favorites List -->
     <ul id="favorites-list"></ul>
   </div>
+
+</div>
+
+
   <!-- JAVASCRIPT LINKING -->
 
 

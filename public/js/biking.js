@@ -1,3 +1,5 @@
+// USER AUTHENTICATION
+
 // listen for any change in the state of the user authorization
 firebase.auth().onAuthStateChanged(function(user) {
   // if there is a user authenticated..
@@ -14,13 +16,29 @@ firebase.auth().onAuthStateChanged(function(user) {
 document.getElementById('userName').innerHTML = "Hello " + displayName;
 document.getElementById("photo").src = photoURL;
 } else {
-  // hide the log out button and hide contents of the test dive
+  // hide the log out button and hide contents of the test div
   document.getElementById('photo').style.visibility = "hidden";
   document.getElementById('userName').style.visibility = "hidden";
   // User is signed out.
   // ...
 }
 });
+// END USER AUTHENTICATION
+
+// DATABASE
+
+// find button that saves to wishlist
+const submitFaves = document.querySelector('.save');
+
+// saving data to database
+submitFaves.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  db.collection('users').add({
+    
+  })
+})
+
+// END DATABASE
 
 // MAIN NAV
 // Function that moves all content in main div to the right when the menu is open
@@ -38,12 +56,7 @@ function closeNav() {
 
 // END OF MAIN NAV
 
-// LOG IN
-// var user = localStorage.getItem("name");
-// var welcome = 'Welcome ' + user + "!";
-// document.getElementById("test").innerHTML = welcome;
 
-// END OF LOG IN
 
 // API FOR WEATHER
 
